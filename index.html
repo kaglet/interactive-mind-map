@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Second Life &amp; Virtual Ethics — Interactive Mind Map</title>
+  <meta name="description" content="INY 715 Assignment 2 — Information Ethics in the Metaverse. Branch: How does the game Second Life impact virtual ethics?" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- animated background -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="bg-glow g1"></div>
+    <div class="bg-glow g2"></div>
+    <canvas id="stars"></canvas>
+  </div>
+
+  <!-- top bar -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
+      </span>
+      <div>
+        <p class="brand-kicker">INY 715 · Information Ethics in the Metaverse</p>
+        <h1 class="brand-title">How does Second Life impact virtual ethics?</h1>
+      </div>
+    </div>
+
+    <div class="topbar-actions">
+      <div class="progress" title="Nodes you have opened">
+        <svg class="progress-ring" viewBox="0 0 36 36" aria-hidden="true">
+          <circle class="track" cx="18" cy="18" r="15"/>
+          <circle class="fill" id="progressFill" cx="18" cy="18" r="15"/>
+        </svg>
+        <span><strong id="progressCount">0</strong>/<span id="progressTotal">0</span> explored</span>
+      </div>
+      <button class="btn" id="tourBtn" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>
+        <span>Guided tour</span>
+      </button>
+      <button class="btn ghost" id="sourcesBtn" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h10l4 4v12H5z M14 4v5h5"/></svg>
+        <span>Sources &amp; credits</span>
+      </button>
+      <button class="btn ghost icon-only" id="replayBtn" type="button" title="Replay intro animation" aria-label="Replay intro animation">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4h4"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- the map -->
+  <main class="viewport" id="viewport" aria-label="Interactive mind map. Drag to pan, scroll or pinch to zoom.">
+    <div class="stage" id="stage">
+      <svg class="edges" id="edges" aria-hidden="true"></svg>
+      <div class="edge-labels" id="edgeLabels" aria-hidden="true"></div>
+      <div class="nodes" id="nodes"></div>
+    </div>
+  </main>
+
+  <!-- zoom controls + hint -->
+  <div class="zoom" role="group" aria-label="Zoom controls">
+    <button type="button" id="zoomIn" aria-label="Zoom in">+</button>
+    <button type="button" id="zoomFit" aria-label="Fit map to screen">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+    </button>
+    <button type="button" id="zoomOut" aria-label="Zoom out">−</button>
+  </div>
+
+  <div class="hint" id="hint">
+    <span class="hint-dot"></span>
+    Tap a <strong>⊕</strong> to open a node · drag to pan · scroll to zoom
+  </div>
+
+  <button class="skip" id="skipBtn" type="button">Skip intro ›</button>
+
+  <!-- detail "portal" -->
+  <div class="portal" id="portal" hidden>
+    <div class="portal-bg" id="portalBg"></div>
+    <article class="panel c-cyan" id="panel" role="dialog" aria-modal="true" aria-labelledby="panelTitle">
+      <header class="panel-head">
+        <div>
+          <p class="panel-kicker" id="panelKicker"></p>
+          <h2 class="panel-title" id="panelTitle"></h2>
+        </div>
+        <button class="panel-close" id="panelClose" type="button" aria-label="Close">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </header>
+      <div class="panel-body" id="panelBody"></div>
+      <footer class="panel-foot">
+        <button class="btn ghost" id="prevBtn" type="button">‹ Previous</button>
+        <span class="panel-step" id="panelStep"></span>
+        <button class="btn" id="nextBtn" type="button">Next ›</button>
+      </footer>
+    </article>
+  </div>
+
+  <!-- sources drawer -->
+  <aside class="drawer" id="drawer" aria-hidden="true" aria-labelledby="drawerTitle">
+    <div class="drawer-inner">
+      <header class="drawer-head">
+        <h2 id="drawerTitle">Sources &amp; credits</h2>
+        <button class="panel-close" id="drawerClose" type="button" aria-label="Close sources">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </header>
+
+      <section class="credits">
+        <h3>Group member contribution</h3>
+        <!-- EDIT ME: put your own name / student number and role here -->
+        <p><strong>[Your name &amp; student number]</strong> — researched, wrote and built this branch (Question 6: <em>How does the game Second Life impact virtual ethics?</em>), including the interactive HTML/CSS/JS map.</p>
+      </section>
+
+      <section>
+        <h3>Reference list</h3>
+        <ol class="ref-list" id="refList"></ol>
+      </section>
+    </div>
+  </aside>
+  <div class="drawer-scrim" id="drawerScrim"></div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
