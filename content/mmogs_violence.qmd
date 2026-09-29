@@ -1,0 +1,31 @@
+---
+format:
+  pdf:
+    number-sections: true
+    keep-tex: true
+    colorlinks: true
+    documentclass: article
+    classoption: [a4paper, 10pt]
+    toc: true
+    include-in-header:
+      - text: |
+          \usepackage{color}
+          \usepackage{graphicx}
+          \usepackage{listings}
+          \usepackage{lmodern}
+          \usepackage{mdframed}
+          \usepackage{url}
+          \usepackage{needspace}
+          \linespread{1.25}
+          \definecolor{blue}{rgb}{0,0,0.8}
+          \definecolor{dkgreen}{rgb}{0,0.6,0}
+          \definecolor{mauve}{rgb}{0.58,0,0.82}
+          \definecolor{gray}{rgb}{0.5,0.5,0.5}
+cite-method: biblatex
+biblatexoptions: [style=apa]
+bibliography: references.bib
+link-citations: true
+---
+
+# Does violence in MMOGs have an impact on real life?
+
