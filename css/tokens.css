@@ -1,0 +1,76 @@
+/* =========================================================
+   tokens.css — colours, fonts, base + background
+   Pastel palette on warm grey. Each colour has:
+     accent (lines, strips) · deep (text) · soft (tints)
+   ========================================================= */
+:root {
+  --bg: #e9e5e0;
+  --bg-2: #dfdad4;
+  --paper: #f8f6f3;
+  --paper-2: #f2efeb;
+  --ink: #3b3632;
+  --ink-2: #57504a;
+  --muted: #857c74;
+  --line: rgba(80, 64, 50, 0.14);
+  --shadow: 0 10px 30px rgba(90, 72, 55, 0.12), 0 2px 6px rgba(90, 72, 55, 0.06);
+  --shadow-lg: 0 24px 60px rgba(90, 72, 55, 0.18), 0 4px 12px rgba(90, 72, 55, 0.08);
+
+  --blue: #9dbcdc;   --blue-deep: #44698f;   --blue-soft: #e4edf6;
+  --rose: #e9aab4;   --rose-deep: #a14f5e;   --rose-soft: #f8e6e9;
+  --sage: #a9cdb3;   --sage-deep: #4b7a5a;   --sage-soft: #e5f0e8;
+  --lilac: #bdb1e0;  --lilac-deep: #66589b;  --lilac-soft: #ece8f6;
+  --peach: #f0c79c;  --peach-deep: #97652c;  --peach-soft: #f9eddf;
+  --mint: #a5d3cf;   --mint-deep: #3e7a75;   --mint-soft: #e3f2f0;
+  --stone: #cfc5ba;  --stone-deep: #4a423c;  --stone-soft: #f3efea;
+
+  --radius: 18px;
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --ease-spring: cubic-bezier(.34, 1.56, .64, 1);
+  --ease-film: cubic-bezier(.65, 0, .35, 1);
+
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* default colour context */
+  --c: var(--blue); --c-deep: var(--blue-deep); --c-soft: var(--blue-soft);
+}
+
+/* colour contexts (class names kept from v1 for compatibility) */
+.c-cyan   { --c: var(--blue);  --c-deep: var(--blue-deep);  --c-soft: var(--blue-soft); }
+.c-pink   { --c: var(--rose);  --c-deep: var(--rose-deep);  --c-soft: var(--rose-soft); }
+.c-green  { --c: var(--sage);  --c-deep: var(--sage-deep);  --c-soft: var(--sage-soft); }
+.c-violet { --c: var(--lilac); --c-deep: var(--lilac-deep); --c-soft: var(--lilac-soft); }
+.c-amber  { --c: var(--peach); --c-deep: var(--peach-deep); --c-soft: var(--peach-soft); }
+.c-sky    { --c: var(--mint);  --c-deep: var(--mint-deep);  --c-soft: var(--mint-soft); }
+.c-white  { --c: var(--stone); --c-deep: var(--stone-deep); --c-soft: var(--stone-soft); }
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; height: 100%; overflow: hidden;
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+button { font: inherit; color: inherit; cursor: pointer; }
+svg { display: block; }
+[hidden] { display: none !important; }
+
+/* background */
+.bg { position: fixed; inset: 0; z-index: 0; overflow: hidden;
+  background:
+    radial-gradient(1100px 700px at 12% 8%, #f1ece6 0%, transparent 60%),
+    radial-gradient(900px 700px at 92% 95%, #e2dcd5 0%, transparent 60%),
+    var(--bg); }
+.bg-grid {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(90, 72, 55, .15) 1.2px, transparent 1.3px);
+  background-size: 28px 28px;
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 85%);
+          mask-image: radial-gradient(ellipse at center, black 30%, transparent 85%);
+}
+.bg-glow { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .55; }
+.g1 { width: 460px; height: 460px; background: #f3d9c6; left: -140px; top: 35%; animation: drift 22s ease-in-out infinite alternate; }
+.g2 { width: 420px; height: 420px; background: #d9d5ee; right: -120px; top: 2%; animation: drift 26s ease-in-out infinite alternate-reverse; }
+.g3 { width: 380px; height: 380px; background: #d3e8e4; right: 20%; bottom: -160px; animation: drift 30s ease-in-out infinite alternate; }
+@keyframes drift { to { transform: translate(70px, -50px) scale(1.12); } }
+#stars { position: absolute; inset: 0; width: 100%; height: 100%; }

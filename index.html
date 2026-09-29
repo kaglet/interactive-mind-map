@@ -3,20 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Second Life &amp; Virtual Ethics — Interactive Mind Map</title>
-  <meta name="description" content="INY 715 Assignment 2 — Information Ethics in the Metaverse. Branch: How does the game Second Life impact virtual ethics?" />
+  <title>Information Ethics in the Metaverse — Interactive Mind Map</title>
+  <meta name="description" content="INY 715 Assignment 2 — an interactive, multi-level mind map on Information Ethics in the Metaverse." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
 
-  <!-- animated background -->
+  <!-- styles: tokens → layout → map → panel → media → cinematic -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/map.css" />
+  <link rel="stylesheet" href="css/panel.css" />
+  <link rel="stylesheet" href="css/media.css" />
+  <link rel="stylesheet" href="css/cinematic.css" />
+</head>
+<body class="cinema">
+
+  <!-- background -->
   <div class="bg" aria-hidden="true">
     <div class="bg-grid"></div>
     <div class="bg-glow g1"></div>
     <div class="bg-glow g2"></div>
+    <div class="bg-glow g3"></div>
     <canvas id="stars"></canvas>
   </div>
 
@@ -26,9 +34,10 @@
       <span class="brand-mark" aria-hidden="true">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
       </span>
-      <div>
-        <p class="brand-kicker">INY 715 · Information Ethics in the Metaverse</p>
-        <h1 class="brand-title">How does Second Life impact virtual ethics?</h1>
+      <div class="brand-text">
+        <p class="brand-kicker" id="brandKicker"></p>
+        <h1 class="brand-title" id="brandTitle"></h1>
+        <nav class="crumb" id="crumb" aria-label="Where you are"></nav>
       </div>
     </div>
 
@@ -46,27 +55,31 @@
       </button>
       <button class="btn ghost" id="sourcesBtn" type="button">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h10l4 4v12H5z M14 4v5h5"/></svg>
-        <span>Sources &amp; credits</span>
+        <span>Sources &amp; team</span>
       </button>
-      <button class="btn ghost icon-only" id="replayBtn" type="button" title="Replay intro animation" aria-label="Replay intro animation">
+      <button class="btn ghost icon-only" id="soundBtn" type="button" aria-pressed="false" aria-label="Toggle sound">
+        <svg class="snd-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z M16 8.5a5 5 0 0 1 0 7 M18.5 6a8.5 8.5 0 0 1 0 12"/></svg>
+        <svg class="snd-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z M16 9l5 6 M21 9l-5 6"/></svg>
+      </button>
+      <button class="btn ghost icon-only" id="replayBtn" type="button" title="Replay intro" aria-label="Replay intro">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4h4"/></svg>
       </button>
     </div>
   </header>
 
   <!-- the map -->
-  <main class="viewport" id="viewport" aria-label="Interactive mind map. Drag to pan, scroll or pinch to zoom.">
-    <div class="stage" id="stage">
-      <svg class="edges" id="edges" aria-hidden="true"></svg>
-      <div class="edge-labels" id="edgeLabels" aria-hidden="true"></div>
-      <div class="nodes" id="nodes"></div>
-    </div>
+  <main class="viewport" id="viewport" aria-label="Interactive mind map. Drag to pan, scroll or pinch to zoom. Keys 1 to 5 jump to a question, 0 for overview.">
+    <div class="stage" id="stage"></div>
   </main>
 
-  <!-- zoom controls + hint -->
+  <!-- question dock -->
+  <nav class="dock" id="dock" aria-label="Questions"></nav>
+
+  <!-- minimap + zoom -->
+  <div class="minimap" id="minimap" title="Map overview — click a question to fly there"></div>
   <div class="zoom" role="group" aria-label="Zoom controls">
     <button type="button" id="zoomIn" aria-label="Zoom in">+</button>
-    <button type="button" id="zoomFit" aria-label="Fit map to screen">
+    <button type="button" id="zoomFit" aria-label="Fit to screen">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
     </button>
     <button type="button" id="zoomOut" aria-label="Zoom out">−</button>
@@ -74,19 +87,46 @@
 
   <div class="hint" id="hint">
     <span class="hint-dot"></span>
-    Tap a <strong>⊕</strong> to open a node · drag to pan · scroll to zoom
+    Click a question to fly in · tap a <strong>⊕</strong> to open a node · drag to pan · scroll to zoom
   </div>
 
-  <button class="skip" id="skipBtn" type="button">Skip intro ›</button>
+  <!-- film letterbox + vignette (used during the intro and camera flights) -->
+  <div class="letterbox lb-top" aria-hidden="true"></div>
+  <div class="letterbox lb-bottom" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <button class="skip gone" id="skipIntro" type="button">Skip intro ›</button>
 
-  <!-- detail "portal" -->
+  <!-- title card -->
+  <section class="intro" id="intro" hidden aria-label="Introduction">
+    <div class="intro-glow" aria-hidden="true"></div>
+    <div class="intro-inner">
+      <p class="intro-kicker">INY 715 · Assignment 2 · Interactive mind map</p>
+      <h2 class="intro-title">
+        <span class="w" style="--w:0">Information</span>
+        <span class="w" style="--w:1">Ethics</span>
+        <span class="w it" style="--w:2">in the</span>
+        <span class="w" style="--w:3">Metaverse</span>
+      </h2>
+      <ol class="intro-qs" id="introQuestions"></ol>
+      <div class="intro-actions">
+        <button class="btn" id="enterSound" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/></svg><span>Enter with sound</span>
+        </button>
+        <button class="btn ghost" id="enterQuiet" type="button"><span>Enter quietly</span></button>
+      </div>
+      <p class="intro-tip">Best experienced full-screen · sound is soft and optional</p>
+    </div>
+  </section>
+
+  <!-- detail portal -->
   <div class="portal" id="portal" hidden>
     <div class="portal-bg" id="portalBg"></div>
-    <article class="panel c-cyan" id="panel" role="dialog" aria-modal="true" aria-labelledby="panelTitle">
+    <article class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="panelTitle">
       <header class="panel-head">
         <div>
           <p class="panel-kicker" id="panelKicker"></p>
           <h2 class="panel-title" id="panelTitle"></h2>
+          <p class="panel-question" id="panelQuestion"></p>
         </div>
         <button class="panel-close" id="panelClose" type="button" aria-label="Close">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
@@ -101,32 +141,46 @@
     </article>
   </div>
 
-  <!-- sources drawer -->
+  <!-- drawer: sources & team / dev checklist -->
   <aside class="drawer" id="drawer" aria-hidden="true" aria-labelledby="drawerTitle">
     <div class="drawer-inner">
       <header class="drawer-head">
-        <h2 id="drawerTitle">Sources &amp; credits</h2>
-        <button class="panel-close" id="drawerClose" type="button" aria-label="Close sources">
+        <h2 id="drawerTitle">Sources &amp; team</h2>
+        <button class="panel-close" id="drawerClose" type="button" aria-label="Close">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
       </header>
-
-      <section class="credits">
-        <h3>Group member contribution</h3>
-        <!-- EDIT ME: put your own name / student number and role here -->
-        <p><strong>[Your name &amp; student number]</strong> — researched, wrote and built this branch (Question 6: <em>How does the game Second Life impact virtual ethics?</em>), including the interactive HTML/CSS/JS map.</p>
-      </section>
-
-      <section>
-        <h3>Reference list</h3>
-        <ol class="ref-list" id="refList"></ol>
-      </section>
+      <div id="drawerBody"></div>
     </div>
   </aside>
   <div class="drawer-scrim" id="drawerScrim"></div>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="script.js"></script>
+  <!-- 1. namespace -->
+  <script src="js/core/namespace.js"></script>
+  <!-- 2. data -->
+  <script src="js/data/config.js"></script>
+  <script src="js/data/center.js"></script>
+  <script src="js/data/team.js"></script>
+  <!-- 3. one file per question -->
+  <script src="js/branches/q1-metaverse.js"></script>
+  <script src="js/branches/q2-digital-identity.js"></script>
+  <script src="js/branches/q3-second-life.js"></script>
+  <script src="js/branches/q4-metaverse-ie.js"></script>
+  <script src="js/branches/q5-mmog-violence.js"></script>
+  <script src="js/data/links.js"></script>
+  <!-- 4. engine -->
+  <script src="js/core/layout.js"></script>
+  <script src="js/core/render.js"></script>
+  <script src="js/core/camera.js"></script>
+  <script src="js/core/media.js"></script>
+  <script src="js/core/panel.js"></script>
+  <script src="js/core/sound.js"></script>
+  <script src="js/core/intro.js"></script>
+  <script src="js/core/minimap.js"></script>
+  <script src="js/core/devtools.js"></script>
+  <!-- 5. start -->
+  <script src="js/app.js"></script>
 </body>
 </html>

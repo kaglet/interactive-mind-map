@@ -1,0 +1,10 @@
+Put these images here (names are case-sensitive):
+secondlife_main.png
+secondlife.jpg
+disinhibition.jpg
+what-is-metaverse.jpeg
+metaverse.jpg
+metaverse2.jpg
+Digital_id.jpeg
+Digital_id2.jpg
+metaverseNethics2.jpg
