@@ -78,50 +78,46 @@ MindMap.registerBranch({
     {
       id: "contamination", level: 2,
       x: 60, y: 70, w: 400,
-      tag: "Theory",
-      title: "Contamination thesis vs the magic circle",
-      teaser: "Does violence leak out of the game — or stay inside it?",
+      tag: "Evidence", title: "Considerations Over Scopes - Macro vs Micro",
       detail: {
-        kicker: "Theory",
-        title: "The contamination thesis vs the magic circle",
-        hook: "Is a game a window onto the world — or a sealed room?",
-        argument: {
-          label: "Theoretical connection",
-          html: "<p>Two positions frame the debate <cite>(Goerger, 2017; Schulzke, 2010; Ostritsch, 2017)</cite>:</p>"
+        kicker: "Evidence vs Theory - The Room Left To Explore",
+        title: "Considerations Over Scopes - Macro vs Micro",
+        hook: "Crime rates drop as game sales rise—so why are we still obsessed with virtual slaughter?",
+        argument:
+        {
+          label: "Core idea",
+          html: `
+            <p>
+            The <em>“contamination thesis”</em> asserts 
+            game violence leaks into real-world aggression 
+            <cite>(Goerger, 2017)</cite>. However, macro-data 
+            disproves the “contamination thesis” (games do not 
+            turn players into real-world mass shooters) 
+            <cite>(Goerger, 2017; Schulzke, 2010)</cite>.
+            </p> 
+            
+            <p>
+            However, macro-crime analysis miss cultural 
+            context <strong>Node 2.3: Satire, Tragedy vs. 
+            Atrocity Porn (The Endorsement View)</strong>, 
+            and more microscopic lenses where changes can be 
+            induced or correlated with certain individuals. 
+            Schulzke and Ostritsch argue games operate inside 
+            a “magic circle” where virtual actions lack victims 
+            <cite>(Ostritsch, 2017; Schulzke, 2010)</cite>.
+            </p>
+            <p>
+            The moral question then shifts to whether a game 
+            glorifies depravity or forces critical reflection 
+            <cite>(Goerger, 2017; Sicart, 2009)</cite>. Violent 
+            games contain nuanced, non-uniform nature. Further 
+            they do not automatically force so much as reveal 
+            the nuanced, non-uniform tastes of their player; 
+            how they handle learning from the moral experiences 
+            presented in the game, and comment introspectively 
+            upon their own nature relative to the game.
+            </p>`,
         },
-        media: [{ type: "compare", at: "hook",
-          left: { title: "Contamination thesis", tone: "bad", items: ["Game violence ‘leaks’ into real life", "Players become more aggressive", "Not supported by macro-level crime data"] },
-          right: { title: "The magic circle", tone: "good", items: ["Play happens in a bounded space", "Virtual acts have no real victims", "Moral focus moves to meaning and endorsement"] } }],
-        reflect: {
-          q: "Where does the magic circle break down in an MMOG?",
-          a: "In MMOGs the other players are real people. Harassment, griefing or theft of items bought with real money cross the circle — which links back to Q3’s griefing and ownership nodes."
-        },
-        refs: ["goerger2017", "schulzke2010", "ostritsch2017"]
-      }
-    },
-    {
-      id: "data", level: 3, parent: "contamination",
-      x: 80, y: 400, w: 280,
-      tag: "Evidence", title: "The macro data: sales vs crime",
-      detail: {
-        kicker: "Evidence",
-        title: "Game sales vs youth violent crime",
-        hook: "If games caused violence, shouldn’t violence rise as games spread?",
-        argument: { label: "Core idea", html: "<p>The claim behind this node is that video game sales have risen while youth violent crime has fallen over roughly 30 years — an inverse correlation <cite>(Schulzke, 2010)</cite>. A correlation does not prove games <em>reduce</em> crime, but it is hard to reconcile with the contamination thesis.</p>" },
-        media: [
-          { type: "chart", at: "end",
-            title: "Video game sales vs youth violent crime",
-            xLabel: "Year",
-            series: [
-              { name: "Video game sales", unit: "", values: [] },
-              { name: "Youth violent crime rate", unit: "", values: [] }
-            ],
-            years: [],
-            source: "",
-            brief: "Interactive slider chart. Fill `years` and both `values` arrays with REAL figures from a citable source (e.g. ESA sales data and US OJJDP / FBI UCR juvenile arrest rates), and set `source`. The chart stays hidden until data is added."
-          }
-        ],
-        reflect: { q: "Does a correlation between two trends prove one causes the other?", a: "No \u2014 other factors (policing, economics, demographics) also change over time. The data weakens the contamination thesis but does not prove games reduce crime." },
         refs: ["schulzke2010"]
       }
     },
@@ -141,12 +137,16 @@ MindMap.registerBranch({
           html: "<p>Goerger and Ostritsch argue that <strong>graphicness alone does not decide morality</strong>; context and how values are built into the game do <cite>(Goerger, 2017; Ostritsch, 2017)</cite>.</p><p>Under Ostritsch’s <strong>Endorsement View</strong>, <em>representing</em> evil (as GTA V does) is not immoral if it is framed satirically, whereas <em>endorsing</em> an abhorrent worldview (as in <em>KZ Manager</em> or <em>Hatred</em>) violates moral obligations <cite>(Ostritsch, 2017)</cite>.</p>"
         },
         media: [
-          { type: "compare", at: "hook",
+          {
+            type: "compare", at: "hook",
             left: { title: "Represents evil (can be defensible)", tone: "good", items: ["GTA V — violence framed as satire", "Spec Ops: The Line — forces the player to confront what they did", "Invites critical reflection"] },
-            right: { title: "Endorses evil (abhorrent)", tone: "bad", items: ["KZ Manager — players run a concentration camp", "Hatred — violence against civilians as the goal", "Asks the player to enjoy the worldview"] } },
-          { type: "slot", kind: "video", at: "end",
+            right: { title: "Endorses evil (abhorrent)", tone: "bad", items: ["KZ Manager — players run a concentration camp", "Hatred — violence against civilians as the goal", "Asks the player to enjoy the worldview"] }
+          },
+          {
+            type: "slot", kind: "video", at: "end",
             brief: "Side-by-side gameplay analysis: GTA V’s satire vs Spec Ops: The Line’s white phosphorus scene (and a news item on banned titles).",
-            tips: "Use a video-essay analysis from YouTube rather than raw gameplay footage (less graphic, more analytical). Add a content warning line in the caption." }
+            tips: "Use a video-essay analysis from YouTube rather than raw gameplay footage (less graphic, more analytical). Add a content warning line in the caption."
+          }
         ],
         reflect: {
           q: "Can the same violent scene be ethical in one game and unethical in another?",
@@ -173,18 +173,67 @@ MindMap.registerBranch({
       id: "virtue", level: 2,
       x: 600, y: 820, w: 460,
       tag: "Node 5.3",
-      title: "Virtue scaffolding: games as moral gymnasiums",
-      teaser: "Can playing a violent game make you a more virtuous person?",
+      title: "Games as Virtue Scaffolding",
+      teaser: "Can playing a violent game make you a <em>more</em> virtuous person?",
       detail: {
         kicker: "Node 5.3 · Virtue scaffolding",
-        title: "Games as moral gymnasiums",
-        hook: "Can playing a violent game make you a more virtuous person?",
+        title: "Games as Virtue Scaffolding",
+        hook: "Can playing a violent game make you a <em>more</em> virtuous person?",
         argument: {
           label: "Core argument & theoretical connection",
-          html: "<p>Wonderly uses <strong>Humean sentimentalism</strong> to argue that ultra-violent gaming can erode empathy <cite>(Wonderly, 2008)</cite>. Schulzke replies in two ways <cite>(Schulzke, 2010)</cite>:</p><ul><li>Through <strong>Kant</strong>: virtual attacks carry no intention to harm real people.</li><li>Through <strong>Aristotle</strong>: choice-driven games such as <em>Fallout 3</em> and <em>The Last of Us</em> work as moral simulators where players practise virtuous decision-making <cite>(Goerger, 2017; Schulzke, 2010)</cite>.</li></ul>"
+          html: `
+            <p>
+            <strong>Core Argument & Theoretical Connection:</strong> 
+            Wonderly uses Humean sentimentalism to argue 
+            ultra-violent gaming erodes empathy 
+            <cite>(Wonderly, 2008)</cite>. 
+            </p>
+
+            <p>
+            Rebutting this, Schulzke demonstrates via Kant 
+            that virtual attacks carry no intent to harm 
+            real people <cite>(Schulzke, 2010)</cite>, and 
+            via Aristotle that choice-engine games (Fallout 3, 
+            The Last of Us) serve as moral simulators to 
+            practice virtuous decision-making 
+            <cite>(Goerger, 2017; Schulzke, 2010)</cite>.
+            </p>`,
         },
         media: [
-          { type: "dilemma", at: "end",
+          {
+            type: "dilemma", at: "end",
+            title: "Try it: the Megaton dilemma (Fallout 3)",
+            scenario: "In <em>Fallout 3</em>, the town of Megaton is built around an unexploded atomic bomb. A stranger, Mr Burke, offers you a reward to detonate it and wipe the town off the map. What do you do?",
+            choices: [
+              {
+                label: "Disarm the bomb and protect the town",
+                outcome: "The town survives and its people thank you. You give up the reward.",
+                lenses: [
+                  { name: "Aristotle (Schulzke)", text: "You practised courage and justice under temptation — the kind of repeated choice that builds virtuous character." },
+                  { name: "Wonderly", text: "Your empathy for the town’s people guided the choice — the game engaged your moral sentiments rather than dulling them." }
+                ]
+              },
+              {
+                label: "Detonate the bomb for the reward",
+                outcome: "Megaton is destroyed. The game shows the blast and the loss — and other characters react to what you did.",
+                lenses: [
+                  { name: "Kant (Schulzke)", text: "No real person was harmed and you had no intention to harm anyone real — so, on this view, the act is not a real moral wrong." },
+                  { name: "Wonderly", text: "If you felt nothing, repeated choices like this could dull the empathy that normally stops cruelty." },
+                  { name: "Aristotle (Schulzke)", text: "The game still makes you face the consequences — reflecting on this choice is itself moral practice." }
+                ]
+              },
+              {
+                label: "Walk away and do nothing",
+                outcome: "The bomb stays; the town’s fate is left to someone else.",
+                lenses: [
+                  { name: "Aristotle (Schulzke)", text: "Avoiding a choice is also a choice. Good games show that moral life involves responsibility, not just avoiding wrong." }
+                ]
+              }
+            ],
+            note: "Scenario described for discussion; lenses summarise Wonderly (2008) and Schulzke (2010)."
+          },
+          {
+            type: "dilemma", at: "end",
             title: "Try it: the Megaton dilemma (Fallout 3)",
             scenario: "In <em>Fallout 3</em>, the town of Megaton is built around an unexploded atomic bomb. A stranger, Mr Burke, offers you a reward to detonate it and wipe the town off the map. What do you do?",
             choices: [

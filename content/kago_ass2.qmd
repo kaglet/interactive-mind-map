@@ -39,78 +39,91 @@ NODE MAP OVERVIEW & MULTI-MEDIA BLUEPRINT
 
 - **Provocative Hook**: Is the Metaverse an expansion of human freedom, or a raw data prison?
 
-- **Core Argument & IE Connection**: Information Ethics (IE) views virtual reality as an extension of Floridi’s *infosphere* \[\@himma2008\]. Instead of an amoral playground, users enter as *homo poieticus*—creative stewards duty-bound to prevent informational *entropy* (the degradation of reality and truth)^\[1\]^\[\@himma2008\]. The core ethical dilemma is whether the Metaverse fosters human flourishing or commodifies human existence into data streams \[\@capurro2006\].
+- **Core IE Motivated Argument**: Information Ethics (IE) views virtual reality as an extension of Floridi’s *infosphere* where informational "beings" exist [@himmaHandbookInformationComputer2008]. Instead of an amoral playground, users enter as *homo poieticus*—creative stewards duty-bound to prevent informational *entropy* (the corruption of reality and truth) [@himmaHandbookInformationComputer2008]. The core ethical dilemma is whether the Metaverse fosters human flourishing or commodifies human existence into data streams, a tension explored by [@capurroOntologicalFoundationInformation2006].
+
+- **Multi-Media Cue**: Guided numbered picture scroll of a preamble to second life economy, scandal 1, then scandal 2. Captions are placed under pictures to explain.
+
+  ![As per their website, Second Life features a virtual economy for in game business and real estate management. Currency can be legally converted back into US dollars.]\
+  [@lindenBuyingLand2011]\
+  ![The Class Action Property Rights Lawsuit (Amado v. Linden Lab). After allegedly promising true ownership to players, then changing pricing models for land maintenance, players filed a class action Lawsuit. Linden Lab eventually settled, quietly altering their Terms of Service to clarify that players only own a "limited license" to access the grid.]\
+  [@gardnerClassActionClaims2010]\
+  ![Post-mortem article from CBC detailing the 2007 crash of the virtual life economy caused by a virtual bank called Ginko Financial. Regulations outlawing virtual banks and allowing only real life banks to operate subsequently followed the event.]\
+  [@hsuSecondLifeBank2008]\
+  At the end a food for thought ending. "These are examples of whether to disregard human dignity and the rights they demand simply because their values and sense of being are commodified in a data stream. Some people might not take these seriously however this is worth thinking about the sentimental data forms people have that may not be this Second Life game."\
+
+  [As per their website, Second Life features a virtual economy for in game business and real estate management. Currency can be legally converted back into US dollars.]: images/paste-1.png {width="300"}
+  [The Class Action Property Rights Lawsuit (Amado v. Linden Lab). After allegedly promising true ownership to players, then changing pricing models for land maintenance, players filed a class action Lawsuit. Linden Lab eventually settled, quietly altering their Terms of Service to clarify that players only own a "limited license" to access the grid.]: images/paste-2.png {width="300"}
+  [Post-mortem article from CBC detailing the 2007 crash of the virtual life economy caused by a virtual bank called Ginko Financial. Regulations outlawing virtual banks and allowing only real life banks to operate subsequently followed the event.]: images/paste-3.png {width="300"}
+
+## Node 1.2: The Social Complacency of Multiplayer Games Virtual Evil
+
+- **Provocative Hook**: How do video game UIs turn ordinary gamers into cold, button-pushing virtual war criminals?
+
+- **Core IE Motivated Argument**: In MMOGs and strategy games (*Defcon*, *EVE Online*), games reward mechanical efficiency (points, numbers going up) while stripping away semantic feedback which [@sicartHowLearnedLove2008a; @sicartBanalitySimulatedEvil2009a] refers to as the "banality of simulated evil". Rule engines abstract human suffering into UI metrics, players become unthinking bureaucrats of virtual destruction [@sicartBanalitySimulatedEvil2009a]. While not leading to overt evil in the Infosphere as defined by Floridi [@himmaHandbookInformationComputer2008], this suggests players are rewarded for lack of deep reflection, background static of moral numbness. This culture becomes reinforced through online multiplayer play, beyond similar single player games.
 
 - **Multi-Media Cue**:
 
-  - 3D spatial node embedding a split-screen video comparing Second Life virtual land speculation with physical environmental degradation^\[10\]^\[\@himma2008\].
-
-  - Embedded video essay comparing *Second Life* land speculation and data surveillance with real-world corporate monopolies \[\@himma2008\].
-
-## Node 1.2: The "NPC-ification" of Real Humans (Digital Metaphysics)
-
-- **Provocative Hook**: If you can torture hyper-realistic AI avatars in VR with zero consequences, how long until you start viewing real humans as disposable NPCs?
-
-- **Core Argument & IE Connection**: Discarding cliché debates about "AI rights," Capurro critiques "digital metaphysics"—the dangerous tendency to equate human beings with mere data streams \[\@capurro2006\]. AI avatars lack noumenal will or embodied consciousness \[\@capurro2006\]. The true danger isn't hurting an AI's feelings; it is the erosion of *parrhesia* (truth-telling) and human dignity when real people treat the virtual world as a place beyond moral accountability^\[1\]^\[\@capurro2006\].
-
-- **Multi-Media Cue**: Interactive split-screen node contrasting VR harassment logs with clips from *Westworld* / *Detroit: Become Human*.
-
-## Node 1.3: The Social Complacency of Multiplayer Games & Under The Banality of Virtual Evil
-
-- **Provocative Hook**: How do video game UIs turn ordinary 20-somethings into cold, button-pushing virtual war criminals?
-
-- **Core Argument & IE Connection**: In MMOGs and strategy games (*Defcon*, *EVE Online*), games reward mechanical efficiency (points, numbers going up) while stripping away semantic/emotional feedback \[\@sicart2008\]\[\@sicart2009\]. Sicart calls this the "banality of simulated evil": when rule engines abstract human suffering into UI metrics, players become unthinking bureaucrats of virtual destruction \[\@sicart2009\].
-
-- **Multi-Media Cue**: Audio-visual node playing *Defcon*’s nuclear strikes (minimalist radar + muffled crying audio) alongside real player voice-chats cheering for maximum kill counts \[\@sicart2008\].
+  - Audio-visual node playing *Defcon*’s nuclear strikes (minimalist radar + muffled crying audio) alongside real player voice-chats cheering for maximum kill counts [@sicartHowLearnedLove2008a].
 
 # Sub-Topic 2: Does Violence in MMOGs Impact Real Life? (\~300 Words)
 
-## Node 2.1: Does Violence in MMOGs Impact Real Life? (\~300 Words)
+## Node 2.1: Does Violence in MMOGs Impact Real Life? Considerations Over Varying Scopes (\~300 Words)
 
 - **Provocative Hook**: Crime rates drop as game sales rise—so why are we still obsessed with virtual slaughter?
 
-- The "contamination thesis" asserts game violence leaks into real-world aggression^\[23\]^\[\@goerger2017\]. However, macro-data disproves the "contamination thesis" (games do not turn players into real-world mass shooters) \[\@goerger2017\]\[\@schulzke2010\]. However, focusing only on macro-crime ignores the micro-lens: *why* players are drawn to virtual violence. Schulzke and Ostritsch argue games operate inside a "magic circle" where virtual actions lack victims \[\@ostritsch2017\]\[\@schulzke2010\], but the moral question shifts to whether a game *glorifies* depravity or *forces critical reflection* \[\@goerger2017\]\[\@sicart2009\].
+- The "contamination thesis" asserts game violence leaks into real-world aggression [@goergerValueViolenceEthics2017a]. However, macro-data disproves the "contamination thesis" (games do not turn players into real-world mass shooters) [@goergerValueViolenceEthics2017a; @schulzkeDefendingMoralityViolent2010a]. However, macro-crime analysis miss cultural context [Node 2.3: Satire, Tragedy vs. Atrocity Porn (The Endorsement View)], and more microscopic lenses where changes can be induced or correlated with certain individuals. Schulzke and Ostritsch argue games operate inside a "magic circle" where virtual actions lack victims [@ostritschAmoralistChallengeGaming2017a; @schulzkeDefendingMoralityViolent2010a]. The moral question then shifts to whether a game *glorifies* depravity or *forces critical reflection* [@goergerValueViolenceEthics2017a; @sicartBanalitySimulatedEvil2009a]. Violent games contain nuanced, non-uniform nature. Further they do not automatically force so much as reveal the nuanced, non-uniform tastes of *their player*; how they handle learning from the moral experiences presented in the game, and comment introspectively upon their own nature relative to the game.
 
-- **Multi-Media Cue**: Interactive slider charting video game sales against youth violent crime rates over 30 years (showing inverse correlation)^\[45\]^\[\@schulzke2010\]. Simple interaction idea is to hide each year of the graph either with the slider or by clicking the chart to reveal more years. Everytime they increase the slider or click to reveal, they see the amount of crime for that year. Before they click, they are asked to guess whether they think it will decrease or increase for the next year. They are then told they can research more if their guess was wrong and they want to learn why, with a link to where the chart is from.
+  - Link to [Node 1.2: The Social Complacency of Multiplayer Games Virtual Evil]: Some players might display boredom in terms of ethical engagement and engage with the game for other reasons they do not introspect upon.
 
-## Node 2.2: Satire vs. Atrocity Porn (The Endorsement View)
+- **Multi-Media Cue**: Interactive slider charting video game sales against youth violent crime rates over 30 years (showing inverse correlation)[@schulzkeDefendingMoralityViolent2010a].
 
-- **Provocative Hook**: Why is torturing in *GTA V* satirically defensible, but playing *KZ Manager* morally abhorrent^\[18\]\[46\]^\[\@ostritsch2017\]?
+  - Simple interaction idea is to hide each year of the graph either with the slider or by clicking the chart to reveal more years. Everytime they increase the slider or click to reveal, they see the amount of crime for that year.
 
-- **Core Argument & Theoretical Connection**: Goerger and Ostritsch argue that graphicness alone does not dictate morality; context and value integration do^\[22\]\[24\]^\[\@goerger2017\]^\[47\]^\[\@ostritsch2017\]. Under Ostritsch’s *Endorsement View*, representing evil (*GTA V*) is not immoral if framed satirically, whereas endorsing an abhorrent worldview (*KZ Manager*, *Hatred*) violates moral obligations^\[18\]^\[\@ostritsch2017\].
+  - Before they click, they are asked to guess whether they think it will decrease or increase for the next year.
+
+  - They are then told they can research more if their guess was wrong and they want to learn why, with a link to where the chart is from.
+
+  [Node 2.3: Satire, Tragedy vs. Atrocity Porn (The Endorsement View)]: #node-2.3-satire-tragedy-vs.-atrocity-porn-the-endorsement-view
+
+## Node 2.2: Games as Virtue Scaffolding
+
+- **Provocative Hook**: Can playing a violent game make you a *more* virtuous person [@schulzkeDefendingMoralityViolent2010a]?
+
+- **Core Argument & Theoretical Connection**: Wonderly uses Humean sentimentalism to argue ultra-violent gaming erodes empathy [@wonderlyHumeanApproachAssessing2008a] Rebutting this, Schulzke demonstrates via Kant that virtual attacks carry no intent to harm real people [@schulzkeDefendingMoralityViolent2010a], and via Aristotle that choice-engine games (*Fallout 3*, *The Last of Us*) serve as moral simulators to practice virtuous decision-making [@goergerValueViolenceEthics2017a; @schulzkeDefendingMoralityViolent2010a]
+
+- **Multi-Media Cue**: Decision-tree node showing the moral dilemmas from *Fallout 3* OR *The Witcher Series*, showing how moral engines scaffold ethical reflection.
+
+## Node 2.3: Satire, Tragedy vs. Atrocity Porn (The Endorsement View) {#node-2.3-satire-tragedy-vs.-atrocity-porn-the-endorsement-view}
+
+- **Provocative Hook**: Why is torturing in *GTA V* satirically defensible, but playing *KZ Manager* morally abhorrent [@ostritschAmoralistChallengeGaming2017a]?
+
+- **Core Argument & Theoretical Connection**: Goerger and Ostritsch argue that graphic nature alone does not dictate morality; context and value integration do [@goergerValueViolenceEthics2017a; @ostritschAmoralistChallengeGaming2017a]. Under Ostritsch’s *Endorsement View*, representing evil (*GTA V*) is not immoral if framed satirically, as moral tragedy (*The Last of Us*, *The Witcher 3*), whereas endorsing an abhorrent worldview (*KZ Manager*, *Hatred, RapeLay*) violates moral obligations [@ostritschAmoralistChallengeGaming2017a].
 
 - **Multi-Media Cue**:
 
-  - PANE 1: Embedded gameplay snapshot of *Grand Theft Auto V* (e.g., the FIB torture mission or Los Santos satire billboards).
+  - PANE 1 - Poll and discussion: **\[30-Second Timer\]** *"In 1989, a text-and-graphic game* **KZ Manager** *was secretly distributed on Commodore 64 floppy disks across Europe. Players managed resources, bought gas and optimized the efficiency of a Nazi concentration camp. It was notoriously banned. Do you agree with the ban."*
 
-  - PANE 2: **The Mystery Flip Card (Interactive Trivia Reveal). Whitened "card" to hide the answer (What the audience sees initially)**: **\[30-Second Timer\]** *"In 1989, a text-and-graphic game was secretly distributed on Commodore 64 floppy disks across Europe. Players managed resources, bought gas, and optimized the efficiency of a Nazi concentration camp. Which notorious banned game was this?"*
+    - Information Ethical Idea board: Some games show ethical degradation itself as part of the educational game experience. This requires tact from authors to avoid encouraging harm endorsement over real groups, retraumatizing them, or without asking affected specifically targeted groups how they would like to be portrayed if high impersonations of them are used.
 
-    - This encourages players to search and even see related games.
+      - Do you think this contrasts acceptable games that endorse non-specific harms on non-specific groups? Would a game like GTA be more socially acceptable due to this, are there specific violations within the game.
 
-    - **Back of Card (Flips on press/click to reveal)**: A picture of the game **KZ Manager** (1989).
+  - PANE 2 - Discussion *then* poll:
 
-    - Unlike *GTA V*, *KZ Manager* has zero satirical, educational, or artistic redeeming value^\[7\]^. Under Ostritsch’s **Endorsement View**, when a game forces players to inflict suffering on real historical/living victims without critique, it crosses from fiction into an **actual real-world endorsement of an immoral worldview**^\[7\]^.
+    - Why do we freely play historical war games where we slaughter ancient Romans, Spartans, or 18th-century soldiers, but recoil at games depicting recent genocides or the Holocaust? How much *time* or *generational distance* must pass before real human trauma becomes "acceptable" material for a game engine? Does this require being sensitive to human collective trauma much like temperature?
 
-  - PANE 3: Interactive Poll Question (For the audience/group to vote on). *"Would you support an absolute legal ban on games like KZ Manager or atrocity simulators?"*
+    - Reveal a game: *RapeLay. The banned, originally on Amazon's website, was a 2006 Japanese adult PC game required players to stalk and simulate the rape of a mother and her two daughters, earning points for acts of sexual violence, including tailing victims on commuter trains and forcing them to have abortions.*
 
-    - \[X\] **YES** – Banning them is morally required to protect human dignity and prevent the glorification of real-world trauma.
+      - Are some harms eternal thematic human experiences. No amount of time will alter acceptance of concepts that are not historical and exist always as harms. Without arguing about the law, of "should" the game be banned, we argue about the information ethical nature.
 
-    - \[X\] **NO** – Even disgusting fiction is protected speech; censoring virtual worlds sets a dangerous precedent for basic expressive liberties.
+      - Is it a reflection of ethical decay or depravity if a gamer ignores the person hood of the people and healthier ways of consuming their experiences in data-ified form.
 
-  - **Group Reflection & Deep-Dive Discussion Prompts (To unpack after votes are tallied)**:
+  - PANE 3: Closing Discussion:
 
-    1.  **The Traumatic Distance Factor**: Why do we freely play historical war games where we slaughter ancient Romans, Spartans, or 18th-century soldiers, but recoil at games depicting recent genocides or the Holocaust? How much *time* or *generational distance* must pass before real human trauma becomes "acceptable" material for a game engine?
+    - Do you align with **Ostritsch’s Endorsement View** (that endorsing real-world evil through game mechanics is an actual moral failure, not just a virtual one)?
 
-    2.  **Philosophical Clash**:
+    - Or do you align with **Schulzke’s Kantian/First Amendment defense** (that as long as no real living person is harmed in the "magic circle," censorship over an individual's historical or present day harm endorsements is a greater moral danger than repulsive pixel art).
 
-        - Do you align with **Ostritsch’s Endorsement View** (that endorsing real-world evil through game mechanics is an actual moral failure, not just a virtual one)^\[7\]^?
+# References
 
-        - Or do you align with **Schulzke’s Kantian/First Amendment defense** (that as long as no real living person is harmed in the "magic circle," censorship is a far greater moral danger than repulsive pixel art)^\[8\]^
-
-## Node 2.3: Virtue Scaffolding: Games as Moral Gymnasiums
-
-- **Provocative Hook**: Can playing a violent game make you a *more* virtuous person^\[21\]^\[\@schulzke2010\]?
-
-- **Core Argument & Theoretical Connection**: Wonderly uses Humean sentimentalism to argue ultra-violent gaming erodes empathy^\[27\]\[50\]^\[\@wonderly2008\]\[\@schulzke2010\]. Rebutting this, Schulzke demonstrates via Kant that virtual attacks carry no intent to harm real people^\[51\]^\[\@schulzke2010\], and via Aristotle that choice-engine games (*Fallout 3*, *The Last of Us*) serve as moral simulators to practice virtuous decision-making^\[23\]^\[\@goerger2017\]^\[21\]\[52\]^\[\@schulzke2010\].
-
-- **Multi-Media Cue**: Decision-tree node showing the moral dilemmas from *Fallout 3* OR *The Witcher Series*, showing how moral engines scaffold ethical reflection^\[52\]^\[\@schulzke2010\].
+::: {#refs}
+:::
